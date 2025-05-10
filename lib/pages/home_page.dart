@@ -22,16 +22,27 @@ class _HomePageState extends State<HomePage> {
 
   @override
   void dispose() {
+    player.dispose();
     super.dispose();
   }
 
   void play() async {
     player.play();
+    setState(() {});
   }
 
-  void pause() async {}
+  void pause() async {
+    player.pause();
+    setState(() {});
+  }
 
-  void changeSpeed() async {}
+  void changeSpeed() async {
+    if (speed == 1) {
+      speed = 2;
+    } else if (speed == 2) {
+      speed = 1;
+    }
+  }
 
   void stop() async {}
 
