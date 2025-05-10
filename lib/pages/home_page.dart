@@ -42,6 +42,8 @@ class _HomePageState extends State<HomePage> {
     } else if (speed == 2) {
       speed = 1;
     }
+    player.setSpeed(speed.toDouble());
+    setState(() {});
   }
 
   void stop() async {}
